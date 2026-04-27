@@ -1,0 +1,92 @@
+EARLY WARNING MODEL RESULTS
+Generated: 2026-04-26 21:33:11
+Total trials in dataset: 495
+Total snapshots: 1455
+
+DATASET SUMMARY
+snapshot_months  label  
+3                Success    366
+                 Failure    129
+6                Success    364
+                 Failure    125
+12               Success    353
+                 Failure    118
+Name: count, dtype: int64
+
+CLASSIFIER RESULTS BY SNAPSHOT WINDOW
+
+Month 3 snapshot
+Hold-out AUC:    0.876
+Avg Precision:   0.909
+              precision    recall  f1-score   support
+
+     Success       0.81      0.86      0.83        29
+     Failure       0.85      0.79      0.81        28
+
+    accuracy                           0.82        57
+   macro avg       0.83      0.82      0.82        57
+weighted avg       0.83      0.82      0.82        57
+
+Month 6 snapshot
+Hold-out AUC:    0.875
+Avg Precision:   0.907
+              precision    recall  f1-score   support
+
+     Success       0.83      0.86      0.85        29
+     Failure       0.85      0.81      0.83        27
+
+    accuracy                           0.84        56
+   macro avg       0.84      0.84      0.84        56
+weighted avg       0.84      0.84      0.84        56
+
+Month 12 snapshot
+Hold-out AUC:    0.872
+Avg Precision:   0.916
+              precision    recall  f1-score   support
+
+     Success       0.83      0.89      0.86        27
+     Failure       0.88      0.81      0.84        26
+
+    accuracy                           0.85        53
+   macro avg       0.85      0.85      0.85        53
+weighted avg       0.85      0.85      0.85        53
+
+SURVIVAL MODEL SUMMARY
+
+FEATURE IMPORTANCE BY SNAPSHOT WINDOW
+
+Month 3 snapshot — top 10 features
+log_planned_enrollment    0.127020
+enrollment_velocity       0.115212
+phase_num                 0.083078
+n_primary_outcomes        0.077730
+n_arms                    0.071934
+n_sites                   0.066202
+start_year                0.065884
+n_countries               0.063360
+is_multinational          0.062424
+has_biological            0.062212
+
+Month 6 snapshot — top 10 features
+enrollment_velocity        0.127961
+log_planned_enrollment     0.122404
+n_primary_outcomes         0.087669
+phase_num                  0.084734
+n_arms                     0.078063
+start_year                 0.066594
+n_sites                    0.065528
+log_n_eligibility_chars    0.061293
+n_countries                0.055610
+is_industry                0.055388
+
+Month 12 snapshot — top 10 features
+log_planned_enrollment     0.128635
+enrollment_velocity        0.119462
+n_primary_outcomes         0.084903
+phase_num                  0.083647
+n_arms                     0.073424
+n_countries                0.066996
+n_sites                    0.066817
+start_year                 0.064912
+log_n_eligibility_chars    0.061996
+has_drug                   0.052221
