@@ -143,6 +143,35 @@ Explainability
   - Consistent performance across 3-, 6-, and 12-month snapshots validates the robustness of the modeling framework and supports real-world deployment as an early warning decision support system.
   - SHAP explainability and survival analysis improved model transparency, helping identify actionable risk drivers and making predictions more interpretable for stakeholders in clinical development.
 
+## How to Run
+
+```bash
+# Clone the repo
+git clone https://github.com/AaronTsuiCareers/ClinicalTrialPred.git
+
+# Navigate
+cd ClinicalTrialPred
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run
+jupyter notebook
+```
+## Project Structure
+
+```text
+ClinicalTrialPred/
+│
+├── clinical_trial_prediction.ipynb    # Main project notebook
+├── clinical_trial_prediction.py       # Core project pipeline and model logic
+├── early_warning_snapshots.csv        # Processed snapshot dataset
+├── shap_early_warning_m6.png          # SHAP feature importance visualization
+├── requirements.txt                   # Project dependencies
+├── README.md                          # Project documentation
+└── .gitignore
+```
+
 ## Author
 
 Aaron Tsui
