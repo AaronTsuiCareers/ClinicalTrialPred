@@ -163,13 +163,12 @@ jupyter notebook
 ```text
 ClinicalTrialPred/
 │
-├── clinical_trial_prediction.ipynb    # Main project notebook
-├── clinical_trial_prediction.py       # Core project pipeline and model logic
-├── early_warning_snapshots.csv        # Processed snapshot dataset
-├── shap_early_warning_m6.png          # SHAP feature importance visualization
-├── requirements.txt                   # Project dependencies
-├── README.md                          # Project documentation
-└── .gitignore
+├── main.ipynb    
+├── clinical_trials_raw.csv       
+├── early_warning_snapshots.csv       
+├── results.txt
+├── requirements.txt                                        
+└── README.md     
 ```
 
 ## Author
