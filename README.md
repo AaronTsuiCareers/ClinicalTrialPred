@@ -171,6 +171,17 @@ ClinicalTrialPred/
 └── README.md     
 ```
 
+---
+
 ## Author
 
-Aaron Tsui
+### Aaron Tsui
+
+Master of Science in Data Science  
+Northwestern University School of Professional Studies
+
+Specializing in machine learning, deep learning, and applied AI systems for healthcare and large-scale predictive modeling.
+
+- Email: aaron.tsui.careers@gmail.com  
+- LinkedIn: https://www.linkedin.com/in/aaron-tsui/
+
