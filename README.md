@@ -178,7 +178,7 @@ ClinicalTrialPred/
 ### Aaron Tsui
 
 Master of Science in Data Science  
-Northwestern University School of Professional Studies
+Northwestern University 
 
 Specializing in machine learning, deep learning, and applied AI systems for healthcare and large-scale predictive modeling.
 
