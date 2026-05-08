@@ -47,7 +47,7 @@ The goal of this project is to:
 
 ### Tech Stack
 - Languages: Python
-- Libraries:
+- Libraries: pandas, lumpy, requests, tqdm, scikit-learn, xgboost, lifelines, shap, matplotlib
 - Tools: Jupyter Notebook
 
 ### Methodology
