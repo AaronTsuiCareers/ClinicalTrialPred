@@ -155,30 +155,48 @@ Explainability
 
 ## Architecture Diagram
 
-ClinicalTrials.gov API
-            │
-            ▼
- Data Collection
-            │
-            ▼
- Data Cleaning & Feature Engineering
-            │
-            ▼
- Snapshot Generation
- (3 / 6 / 12 Months)
-            │
-            ▼
-   XGBoost Classifier
-            │
-      ┌─────┴─────┐
-      ▼           ▼
- SHAP        Cox Survival
- Explainability Analysis
-      │           │
-      └─────┬─────┘
-            ▼
- Early Warning Dashboard /
- Clinical Decision Support
+
+```mermaid
+flowchart LR
+
+    A["ClinicalTrials.gov API<br/>(v2 REST API)"]
+
+    B["Data Collection<br/>Python • Requests"]
+
+    C["Data Cleaning & Preprocessing"]
+
+    D["Feature Engineering"]
+
+    E["Time-Based Snapshot Generation<br/>3 • 6 • 12 Months"]
+
+    F["Training Dataset<br/>495 Trials<br/>1,455 Snapshots"]
+
+    G["XGBoost Classifier"]
+
+    H["Cox Proportional<br/>Hazards Model"]
+
+    I["SHAP Explainability"]
+
+    J["Model Evaluation<br/>ROC-AUC • AP • Accuracy"]
+
+    K["Early Warning System<br/>Clinical Decision Support"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+
+    F --> G
+    F --> H
+
+    G --> I
+    G --> J
+    H --> J
+
+    I --> K
+    J --> K
+```
 
 ## How to Run
 
