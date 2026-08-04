@@ -6,6 +6,15 @@ This project builds an early warning system (with a machine learning model) to p
 
 The system combines machine learning classification, survival analysis, and explainability techniques to evaluate trial feasibility, operational risk, and outcome likelihood.
 
+## Key Highlights
+
+- Built an early warning system to predict clinical trial success up to **12 months before completion**
+- Collected and engineered longitudinal features from the ClinicalTrials.gov API (495 trials, 1,455 snapshots)
+- Developed an XGBoost classification pipeline achieving **ROC-AUC up to 0.876**
+- Performed survival analysis using Cox Proportional Hazards models to quantify failure risk over time
+- Applied SHAP explainability to identify operational drivers of trial success and failure
+- Implemented a time-based validation strategy to simulate real-world deployment
+
 ## Problem Statement
 
 Clinical trials are expensive, time-intensive, and prone to late-stage failure. Many failures occur after substantial financial and operational investment has already been made.
@@ -142,6 +151,34 @@ Explainability
   - Dynamic operational behavior is more predictive than static trial design alone, showing that how a trial progresses early is often more important than how it was originally planned.
   - Consistent performance across 3-, 6-, and 12-month snapshots validates the robustness of the modeling framework and supports real-world deployment as an early warning decision support system.
   - SHAP explainability and survival analysis improved model transparency, helping identify actionable risk drivers and making predictions more interpretable for stakeholders in clinical development.
+ 
+
+## Architecture Diagram
+
+ClinicalTrials.gov API
+            │
+            ▼
+ Data Collection
+            │
+            ▼
+ Data Cleaning & Feature Engineering
+            │
+            ▼
+ Snapshot Generation
+ (3 / 6 / 12 Months)
+            │
+            ▼
+   XGBoost Classifier
+            │
+      ┌─────┴─────┐
+      ▼           ▼
+ SHAP        Cox Survival
+ Explainability Analysis
+      │           │
+      └─────┬─────┘
+            ▼
+ Early Warning Dashboard /
+ Clinical Decision Support
 
 ## How to Run
 
